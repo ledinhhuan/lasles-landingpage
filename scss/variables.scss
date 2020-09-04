@@ -1,0 +1,28 @@
+// font family
+$--font-rubik-base: 'Rubik', sans-serif;
+
+$--max-width-base: 1170px;
+
+// font weight
+$--font-weight-normal: 400;
+$--font-weight-medium: 500;
+$--font-weight-large: 700;
+//color
+$--color-white: #FFF;
+$--color-red: #F53838;
+$--color-pink: #FFECEC;
+$--color-haiti: #0B132A;
+$--color-trout: #4F5665;
+
+// font size
+$--font-size-base: 16px;
+
+// button
+$--button-default-background-color: $--color-red;
+$--border-base: 10px;
+$--button-default-font-size: $--font-size-base;
+$--button-default-color: $--color-white;
+$--button-default-font-weight: $--font-weight-medium;
+
+$--button-round-background-color: $--color-white;
+$--button-round-color: $--color-red;

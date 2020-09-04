@@ -1,0 +1,52 @@
+@mixin m($modifier) {
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin b($block) {
+  $B: $namespace+'-'+$block !global;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  $border-color: $border-color;
+  &.is-round {
+    color: $--color-white;
+    background-color: $--color-red;
+    border-color: $--color-red;
+  }
+}
+
+@mixin button-mixins(
+  $background-color,
+  $color,
+  $border,
+  $border-radius: 10px,
+) {
+  background-color: $background-color;
+  color: $color;
+  border-radius: $border-radius;
+  border: $border;
+}
